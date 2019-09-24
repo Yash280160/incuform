@@ -13,15 +13,15 @@
    <fieldset>  
       <legend>Csharpcorner</legend>  
       <center>  
-         <img src="C:\Users\Karthikeyan.K\Desktop\Add-Male-User.png" alt="Mountain View"><br>  
+         <img src="C:\Users\Yash_Jain\Desktop\medicaps.png" alt="Incubation"><br>  
          First name:<br>   
          <input type="text" name="fname" Value=""><br>  
          Last name :< br>  
          <input type="text" name="lname" Value=""><br>  
-         Address1 :< br>  
-         <input type="text" name="Add1" Value=""><br>  
-         Address2 :< br>  
-         <input type="text" name="Add2" Value=""><br>  
+         Enrollment No. :< br>  
+         <input type="text" name="ENo" Value=""><br>  
+         Skills :< br>  
+         <input type="text" name="Skill" Value=""><br>  
          <br>  
          <input type="button" onclick="Sample()" value="Submit" /><br>  
       </center>  
@@ -31,7 +31,7 @@
          Sub Sample ()  
           Dim iRow  
           Set objExcel = CreateObject ("Excel. Application")  
-          Set objWorkbook = objExcel.Workbooks.Open ("https://docs.google.com/spreadsheets/u/1/d/1F1MqGR0ocXjTiqBK4oe78edr34I_2reNFfewj2gf14A/edit")  
+          Set objWorkbook = objExcel.Workbooks.Open ("URL TO XlSheet")  
           objExcel.Application.Visible = True  
           ObjWorkbook.Windows (1).Visible = True  
           Set XlSheet =objWorkbook.Sheets (1)  
@@ -44,13 +44,13 @@
               Loop  
                  .Cells (iRow, 1).value=Document.GetElementsByName ("fname") (0).Value  
                  .Cells (iRow, 2).value=Document.GetElementsByName ("lname") (0).Value  
-                 .Cells (iRow, 3).value=Document.GetElementsByName ("Add1") (0).Value  
-                 .Cells (iRow, 4).value=Document.GetElementsByName ("Add2") (0).Value  
+                 .Cells (iRow, 3).value=Document.GetElementsByName ("ENo") (0).Value  
+                 .Cells (iRow, 4).value=Document.GetElementsByName ("Skill") (0).Value  
                  MsgBox "Data Added Successfully”, vbinformation  
                  Document.GetElementsByName ("fname") (0).Value=""  
                  Document.GetElementsByName ("lname") (0).Value=""  
-                 Document.GetElementsByName ("Add1") (0).Value=""  
-                 Document.GetElementsByName ("Add2") (0).Value=""  
+                 Document.GetElementsByName ("ENo") (0).Value=""  
+                 Document.GetElementsByName ("Skill") (0).Value=""  
              End With  
              ObjWorkbook. Save  
              ObjWorkbook. Close  
